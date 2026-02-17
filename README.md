@@ -1,4 +1,6 @@
 ![Pylint Status](https://github.com/mmdfathian/TeleBroadcast-Pro/actions/workflows/pylint.yml/badge.svg)
+![Python Version](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue)
+![Project Status](https://img.shields.io/badge/status-beta-orange)
 # 🚀 TeleBroadcast-Pro 
 ### *Professional Telegram Messaging Automation*
 
