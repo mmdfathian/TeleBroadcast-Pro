@@ -1,3 +1,4 @@
+![Pylint Status](https://github.com/mmdfathian/TeleBroadcast-Pro/actions/workflows/pylint.yml/badge.svg)
 # 🚀 TeleBroadcast-Pro 
 ### *Professional Telegram Messaging Automation*
 
