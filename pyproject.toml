@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telebroadcast-pro"
+version = "0.1.0"
+description = "Telegram broadcast automation tool"
+authors = [
+  { name="Your Name" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+  "telethon",
+  "python-dotenv"
+]
+
+[project.scripts]
+telebroadcast = "main:main"
