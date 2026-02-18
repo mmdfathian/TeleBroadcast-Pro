@@ -1,5 +1,7 @@
 name: Performance Benchmark
 on: [push]
+permissions:
+  contents: read
 
 jobs:
   benchmark:
