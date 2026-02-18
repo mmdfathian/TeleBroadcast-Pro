@@ -5,6 +5,33 @@ from dotenv import load_dotenv
 from tqdm import tqdm
 from telethon import TelegramClient
 from telethon.errors import FloodWaitError
+import logging
+import os
+from datetime import datetime
+
+# Logging Configuration
+log_filename = f"broadcast_{datetime.now().strftime('%Y%m%d')}.log"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_filename, encoding='utf-8'),
+        logging.StreamHandler()  # Display in terminal
+    ]
+)
+
+logger = logging.getLogger(__name__)
+
+# Usage Example inside your functions:
+async def send_broadcast(client, user_id, message):
+    try:
+        await client.send_message(user_id, message)
+        logger.info(f"SUCCESS: Message sent to {user_id}")
+        return True
+    except Exception as e:
+        logger.error(f"FAILED: Could not send to {user_id}. Details: {e}")
+        return False
 
 # 1. Load configuration from .env file
 load_dotenv()
