@@ -1,0 +1,14 @@
+name: Performance Benchmark
+on: [push]
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run Benchmark
+        run: python benchmarks/test_performance.py
