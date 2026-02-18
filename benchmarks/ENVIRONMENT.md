@@ -1,13 +1,12 @@
-# Benchmark Environment
+# Benchmark Environment (Updated)
 
-All performance tests are conducted on the following hardware to provide a baseline:
+These benchmarks were executed using **GitHub Actions** on cloud infrastructure.
 
 | Metric | Details |
 | :--- | :--- |
-| **Device** | Samsung Galaxy A54 5G |
-| **Processor** | Exynos 1380 (5 nm) |
-| **Architecture** | ARM64 (Octa-core) |
-| **Python Version** | 3.11 (via Termux/Pydroid) |
-| **Status** | Mobile Environment (Baseline) |
+| **Provider** | GitHub (Microsoft Azure) |
+| **Operating System** | Ubuntu 22.04 LTS |
+| **CPU Architecture** | x86_64 |
+| **Runner Type** | GitHub-Hosted Runner (Standard) |
 
-> **Note:** Performance on Server-grade CPUs (Intel/AMD) and High-speed SSDs is expected to be significantly higher (estimated 2x-5x faster).
+> **Self-Correction:** Previous notes mentioned mobile hardware; however, tests confirmed execution on GitHub's cloud environment.
