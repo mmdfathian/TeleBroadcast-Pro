@@ -1,4 +1,5 @@
 *.session
 *.session-journal
 .env
+benchmarks/last_run.json
 __pycache__/
