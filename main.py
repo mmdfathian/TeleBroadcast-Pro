@@ -1,3 +1,4 @@
+"""Main entry point for TeleBroadcast-Pro application."""
 import asyncio
 import time
 from telethon import TelegramClient
@@ -8,7 +9,7 @@ from broadcaster import start_broadcast
 logger = get_logger("MainApp")
 
 async def main():
-    # Use 'session_name' as in your original code
+    """Main function to handle user menu and client lifecycle."""
     async with TelegramClient('session_name', API_ID, API_HASH) as client:
         print("\n--- TeleBroadcast-Pro Menu ---")
         print("1. Speed Test (Benchmark)")
@@ -19,14 +20,12 @@ async def main():
         if choice == "1":
             print("⏱ Running Benchmark...")
             start_time = time.perf_counter()
-            # Benchmark logic from your original script
-            await asyncio.sleep(1) # Simulating activity
+            await asyncio.sleep(1)
             duration = time.perf_counter() - start_time
-            logger.info(f"Benchmark finished. Average Speed: {duration:.6f}s")
+            logger.info("Benchmark finished. Average Speed: %s", f"{duration:.6f}s")
             
         elif choice == "2":
-            # Keeping your original placeholder users
-            users = ['user1', 'user2', 'user3'] 
+            users = ['user1', 'user2', 'user3']
             msg = "Hello! This is a test broadcast message."
             await start_broadcast(client, users, msg)
 
